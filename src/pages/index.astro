@@ -1,8 +1,5 @@
 ---
-// Component Imports
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+let allPosts = await Astro.glob('./posts/*.md');
 ---
 
 <html lang="en">
@@ -23,7 +20,8 @@
 	</head>
 	<body>
 		<main>
-		hi?
+			<p>Posts</p>
+			{allPosts.map((p) => <a href={p.url}>{p.frontmatter.title}</a>)}
 		</main>
 	</body>
 </html>
