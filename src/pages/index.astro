@@ -21,7 +21,7 @@ let allPosts = await Astro.glob('./posts/*.md');
 	<body>
 		<main>
 			<p>Posts</p>
-			{allPosts.map((p) => <a href={p.url}>{p.frontmatter.title}</a>)}
+			{allPosts.map((p) => <p><a href={p.url}>{p.frontmatter.title}</a></p>)}
 		</main>
 	</body>
 </html>
