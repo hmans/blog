@@ -1,5 +1,10 @@
 ---
 title: Hello World
+layout: ./_layout.astro
 ---
 
-Whaaaaat
+# Whaaaaat
+
+This is a blog post.
+
+Nice.

@@ -1,27 +1,10 @@
 ---
-let allPosts = await Astro.glob('./posts/*.md');
----
+import Layout from "../layouts/Layout.astro";
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<p>Posts</p>
-			{allPosts.map((p) => <p><a href={p.url}>{p.frontmatter.title}</a></p>)}
-		</main>
-	</body>
-</html>
+let allPosts = await Astro.glob('./posts/*.md');
+
+---
+<Layout>
+	<p>Posts</p>
+	{allPosts.map((p) => <p><a href={p.url}>{p.frontmatter.title}</a></p>)}
+</Layout>
