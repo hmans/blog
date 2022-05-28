@@ -3,7 +3,7 @@ import PostLink from "../components/PostLink.astro";
 import Layout from "../layouts/Layout.astro";
 
 const allPosts = (await Astro.glob('./posts/*.md'))
-	.filter(post => !post.frontmatter.draft)
+	.filter(post => !post.frontmatter.draft || import.meta.env.DEV)
 	.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 
 ---
