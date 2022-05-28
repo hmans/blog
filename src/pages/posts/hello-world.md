@@ -4,8 +4,8 @@ layout: ./_layout.astro
 date: May 15 2022
 ---
 
-# Whaaaaat
+# Hello (again), world!
 
-This is a blog post.
+This is my new blog. It's built with [Astro]. Astro is fun.
 
-Nice.
+[astro]: https://astro.build/
