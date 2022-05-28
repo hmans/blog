@@ -1,11 +1,10 @@
 ---
+import PostLink from "../components/PostLink.astro";
 import Layout from "../layouts/Layout.astro";
-
 const allPosts = (await Astro.glob('./posts/*.md')).sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-
 ---
 <Layout>
-	{allPosts.map((p) => <p><a href={p.url}>{p.frontmatter.title}</a>
-		{p.frontmatter.date}</p>
+	{allPosts.map((post) =>
+	<PostLink post={post} />
 	)}
 </Layout>

@@ -1,0 +1,22 @@
+---
+export interface Props {
+  post: any;
+}
+
+const { post } = Astro.props;
+---
+<p>
+  <a href={post.url}>{post.frontmatter.title}</a>
+  {post.frontmatter.date}
+</p>
+
+<style>
+  a {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+
+  p {
+    color: #ccc;
+  }
+</style>
