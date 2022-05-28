@@ -1,7 +1,7 @@
 ---
 title: Building Games with React
 layout: ./_layout.astro
-date: 2022-05-28
+date: May 28 2022
 ---
 
 # Building Games with React

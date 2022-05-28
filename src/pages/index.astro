@@ -5,6 +5,7 @@ const allPosts = (await Astro.glob('./posts/*.md')).sort((a, b) => Date.parse(b.
 
 ---
 <Layout>
-	{allPosts.map((p) => <p><a href={p.url}>{p.frontmatter.title}</a></p>
+	{allPosts.map((p) => <p><a href={p.url}>{p.frontmatter.title}</a>
+		{p.frontmatter.date}</p>
 	)}
 </Layout>
