@@ -5,6 +5,5 @@ let allPosts = await Astro.glob('./posts/*.md');
 
 ---
 <Layout>
-	<p>Posts</p>
 	{allPosts.map((p) => <p><a href={p.url}>{p.frontmatter.title}</a></p>)}
 </Layout>
