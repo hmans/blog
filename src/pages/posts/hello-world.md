@@ -1,7 +1,7 @@
 ---
 title: Hello World
 layout: ./_layout.astro
-publishDate: 15 May 2022
+date: 2022-05-15
 ---
 
 # Whaaaaat

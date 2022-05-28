@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-let allPosts = await Astro.glob('./posts/*.md')
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+const allPosts = (await Astro.glob('./posts/*.md')).sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 
 ---
 <Layout>
