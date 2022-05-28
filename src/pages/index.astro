@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-let allPosts = await Astro.glob('./posts/*.md');
+let allPosts = await Astro.glob('./posts/*.md')
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
 ---
 <Layout>
-	{allPosts.map((p) => <p><a href={p.url}>{p.frontmatter.title}</a></p>)}
+	{allPosts.map((p) => <p><a href={p.url}>{p.frontmatter.title}</a></p>
+	)}
 </Layout>
